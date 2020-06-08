@@ -1,10 +1,7 @@
 package learn.spring.di.sfgdi;
 
 import jdk.swing.interop.SwingInterOpUtils;
-import learn.spring.di.sfgdi.controller.ConstructorInjectedController;
-import learn.spring.di.sfgdi.controller.MyController;
-import learn.spring.di.sfgdi.controller.PropertyInjectionController;
-import learn.spring.di.sfgdi.controller.SetterInjectedController;
+import learn.spring.di.sfgdi.controller.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -17,6 +14,10 @@ public class SfgDiApplication {
         MyController myController = (MyController) ctx.getBean("myController");
         String greeting = myController.sayHello();
         System.out.println(greeting);
+
+        System.out.println("------ i18n -------");
+        I18nController i18nController = (I18nController) ctx.getBean("i18nController");
+        System.out.println(i18nController.sayHello());
 
         System.out.println("------ Primary ------");
         System.out.println(myController.getGreeting());
