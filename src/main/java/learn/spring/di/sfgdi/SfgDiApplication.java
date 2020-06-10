@@ -1,6 +1,5 @@
 package learn.spring.di.sfgdi;
 
-import jdk.swing.interop.SwingInterOpUtils;
 import learn.spring.di.sfgdi.controller.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
